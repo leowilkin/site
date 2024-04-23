@@ -202,12 +202,11 @@ function Page({
             priority
             gradient="linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.45))"
           />
-          <Announcement
+	  <Announcement
             copy="Hop OnBoard and create your first PCB"
             caption="Join 1,000 others to create your first circuit board."
             href="https://hackclub.com/onboard/"
             iconLeft="idea"
-            color="primary"
           />
           <Box
             sx={{
@@ -409,15 +408,15 @@ function Page({
                         count === images.length - 2
                           ? images[0].src
                           : images.length - 1
-                          ? images[1].src
-                          : images[count + 2].src
+                            ? images[1].src
+                            : images[count + 2].src
                       }
                       alt={
                         count === images.length - 2
                           ? images[0].alt
                           : images.length - 1
-                          ? images[1].alt
-                          : images[count + 2].alt
+                            ? images[1].alt
+                            : images[count + 2].alt
                       }
                       width={3000}
                       height={2550}
@@ -777,7 +776,7 @@ function Page({
                             url={data.url}
                             message={data.message}
                             key={key}
-                            opacity={1 / (key/2 + 1)}
+                            opacity={1 / (key / 2 + 1)}
                           />
                         )
                       })}

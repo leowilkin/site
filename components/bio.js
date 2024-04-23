@@ -3,7 +3,8 @@ import Icon from '@hackclub/icons'
 import { useState } from 'react'
 
 export default function Bio({ popup = true, spanTwo = false, ...props }) {
-  let { img, name, teamRole, pronouns, text, subrole, href, video } = props
+  let { img, name, teamRole, pronouns, text, subrole, email, href, video } =
+    props
   const [expand, setExpand] = useState(false)
   return (
     <>
@@ -25,7 +26,7 @@ export default function Bio({ popup = true, spanTwo = false, ...props }) {
           overflowY: 'hidden',
           overscrollBehavior: 'contain',
           gridColumn: !spanTwo ? null : [null, null, `1 / span 2`],
-          position: 'relative',
+          position: 'relative'
         }}
         as={href && !text ? 'a' : 'div'}
         href={href}
@@ -41,10 +42,7 @@ export default function Bio({ popup = true, spanTwo = false, ...props }) {
           width={64}
           height={64}
           mr={3}
-          src={
-            img ||
-            require(`../public/team/${name.split(' ')[0].toLowerCase()}.jpg`)
-          }
+          src={img}
           alt={name}
           sx={{
             overflow: 'hidden',
@@ -97,6 +95,13 @@ export default function Bio({ popup = true, spanTwo = false, ...props }) {
               )}
             </Text>
           </Flex>
+          {!popup && email && (
+            <Text color="muted" as={'a'} href={`mailto:${email}@hackclub.com`}>
+              {email}@hackclub.com
+              <br />
+            </Text>
+          )}
+
           {!popup && (
             <>
               <Text mt={2} mb={0} color="black">
