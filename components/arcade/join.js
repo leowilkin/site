@@ -172,7 +172,7 @@ const Join = ({ fold, last, showForm, setForm, formSent, setFormSent }) => {
                     width: ['100%', '100%', '180%', '200%'],
                     bottom: ['-120px', '-120px', '-40px', '-40px'],
                     color: '#FF5C00',
-                    opacity: 0.4
+                    opacity: 0.7
                   }}
                   className="gaegu"
                 >
